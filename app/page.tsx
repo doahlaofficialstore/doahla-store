@@ -28,7 +28,7 @@ export default function Home() {
 
   // AUTOMATED PAYMENT REDIRECT LOGIC
   useEffect(() => {
-    let timer; any;
+    let timer: any;
     if (isProcessing && countdown > 0) {
       timer = setTimeout(() => setCountdown(countdown - 1), 1000);
     } else if (isProcessing && countdown === 0) {
