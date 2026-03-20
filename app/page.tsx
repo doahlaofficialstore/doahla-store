@@ -6,7 +6,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('home'); 
   const [darkMode, setDarkMode] = useState(false);
   const [selectedGame, setSelectedGame] = useState(null); 
-  const [selectedPack, setSelectedPack] = useState(null); 
+  const [selectedPack, setSelectedPack] = useState<any>(null); 
   const [category, setCategory] = useState('Small Pack');
   const [isProcessing, setIsProcessing] = useState(false);
   const [countdown, setCountdown] = useState(5);
