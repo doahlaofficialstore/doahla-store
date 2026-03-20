@@ -31,8 +31,8 @@ export default function Home() {
     let timer: any;
     if (isProcessing && countdown > 0) {
       timer = setTimeout(() => setCountdown(countdown - 1), 1000);
-    } else if (isProcessing && countdown === 0) {
-      // 1. Generate UPI Link (Standard Format for GPay/PhonePe/Paytm)
+    } else if (isProcessing && countdown === 0 && selectedPack) {
+      // 1. Generate UPI Link (Added 'selectedPack' check for safety)
       const upiURL = `upi://pay?pa=${myUPI}&pn=Doahla%20Official&am=${selectedPack.price}&cu=INR&tn=Order%20for%20${encodeURIComponent(selectedPack.name)}`;
       
       // 2. Open Payment App
